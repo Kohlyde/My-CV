@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Receipt Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <style>
+    body,
+    html {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #424242;
+      /* Charcoal background */
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .navbar-main {
+      width: 100%;
+      background-color: #2F2E2E;
+      box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.3);
+      border-bottom: #000000;
+    }
+
+    .coding-pad,
+    .svg-upload-container {
+      padding: 20px;
+      height: calc(100vh - 80px);
+      overflow-y: auto;
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      border: none;
+    }
+
+    .coding-pad {
+      border-right: 2px solid #333;
+    }
+
+    .svg-display-area {
+      width: 80mm;
+      height: calc(100% - 40px);
+      background-color: #0D0D0D;
+      border: 1px solid #666;
+      padding: 10px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    button {
+      background-color: #0D47A1;
+      color: #FFFFFF;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #1565C0;
+    }
+
+    textarea {
+      width: 100%;
+      height: calc(100% - 60px);
+      background-color: #1E1E1E;
+      color: #DDDDDD;
+      border: 1px solid #444;
+    }
+
+    footer {
+      background-color: #000000;
+      /* Black footer background */
+      color: #E0E0E0;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #333;
+    }
+
+    footer a {
+      color: #E0E0E0;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      margin-bottom: 12px;
+    }
+
+    .contact-info {
+      margin-top: 14px;
+    }
+
+    H3 {
+      font-weight: 700;
+
+    }
+
+    strong {
+      font-weight: 700;
+      font-style: italic;
+      color: #ffffff !important;
+      font-size: 14px !important;
+      text-decoration-line: underline;
+    }
+
+    p, li {
+
+      font-weight: 400;
+      color: #ffffff !important;
+      opacity: 75%;
+      font-size: 16px !important;
+      padding-left: 3%;
+    }
+
+    hr {
+      background-color: #adadad !important;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-main">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">  
+        <li class="nav-item">
+            <a class="nav-link" href="hobbies.html">Hobbies</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://codepen.io/Jsnchase">CodePen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://soundcloud.com/user-999486594">SoundCloud</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/Kohlyde">GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://edmc.nu/profile/323724-k%C3%B8hlyde/">EDMC</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/coalesceedm">FB</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Email</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Phone</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container">
+
+        <h3>&nbsp;</h3>
+        <h3>Hobbies:</h3><hr>
+<p>
+    <strong>Historical Research:</strong> Deep interest in the origins of religious practices, especially within the context of Seventh-day Adventist teachings and historical events like the Revolutionary War.
+</p>
+<p>
+    <strong>Writing:</strong> Passion for crafting detailed and accurate narratives, including short stories, articles, and historical accounts.
+</p>
+<p>
+    <strong>Music Production & Composition:</strong> Specializing in genres such as Disco, Funky House, House Tech, Tech Funk, Funk, Psychedelic Break Beats, Electro Breaks, Techno (including Melodic, Hard, Industrial, and Deep Techno), Psychedelic Dubstep, Deep Dark Dubstep, Tear Out Dubstep, Bass House, Bass Music, Tearout Drum and Bass, Neurofunk, Dark Liquid Drum and Bass, Deep Tech Step, Rock'n'Roll, Metal, Jazz, Texas Blues, and Classical.
+</p>
+<p>
+    <strong>Game Development:</strong> Interest in designing and developing online games, including complex systems like Magic: The Gathering.
+</p>
+<p>
+    <strong>Technology Exploration:</strong> Enjoyment of exploring and utilizing new hardware, like the ASUS dual-processor workstation motherboard.
+</p>
+<p>
+    <strong>Creative Design:</strong> Using tools like Wix’s logo maker to create branding materials, including logos and website elements.
+</p>
+<p>
+    <strong>SVG Art Creation:</strong> Utilizing scalable vector graphics for logos, icons, and other design elements.
+</p>
+<p>
+    <strong>Genealogy:</strong> Research and connection to family history, including notable historical figures.
+</p>
+<p>
+    <strong>Crochet and Cross Stitch:</strong> Engaging in creative and detailed needlework projects.
+</p>
+<p>
+    <strong>Braiding and Weaving 550 Cord:</strong> Crafting durable and intricate designs using 550 cord.
+</p>
+<p>
+    <strong>Playing Pool and Darts:</strong> Enjoyment of classic bar games requiring precision and strategy.
+</p>
+<p>
+    <strong>Playing Pinochle and Cribbage:</strong> Engaging in traditional card games that involve strategic thinking.
+</p>
+<p>
+    <strong>Recording and Studying History:</strong> Focus on the history of Western Civilization, Church History, and various ancient and modern civilizations, including Babylonian, Medo-Persian, Macedonian, Greek, Roman, Egyptian Dynasties, Hebrew, American, British Monarchical, and Commonwealth histories.
+</p>
+
+<h3>Skills:</h3><hr>
+<p>
+    <strong>Data Analysis:</strong> Expertise in analyzing data across various platforms and languages, with a strong focus on automation and analytics.
+</p>
+<p>
+    <strong>Epidemiology:</strong> Specialized knowledge and experience in the field of epidemiology.
+</p>
+<p>
+    <strong>Computer Sciences & Information Sciences:</strong> Deep understanding and proficiency in computer science, information systems, and complex automation systems.
+</p>
+<p>
+    <strong>Consulting:</strong> Skilled in providing expert advice in various fields, including technology, history, and data analysis.
+</p>
+<p>
+    <strong>Coding and Scripting:</strong> Proficiency in multiple programming languages and platforms, including Linux,  Windows, SQL, PowerShell, JavaScript, and HTML/CSS.
+</p>
+<p>
+    <strong>Web Development:</strong> Ability to develop and maintain websites, including knowledge of modern frameworks and responsive design.
+</p>
+<p>
+    <strong>Project Management:</strong> Experience in managing complex projects, including Class 1 and classified projects, ensuring detailed documentation and systematic approaches.
+</p>
+<p>
+    <strong>Strategic Thinking:</strong> Ability to think critically and strategically, particularly in complex problem-solving scenarios.
+</p>
+<p>
+    <strong>Graphic Design:</strong> Skill in creating and editing visual elements, especially in the context of web design and branding.
+</p>
+<p>
+    <strong>Public Speaking:</strong> Ability to convey ideas effectively, drawing parallels to the role of a prophet in revealing truth to others.
+</p>
+<p>
+    <strong>Leadership:</strong> Capable of leading projects and teams, with a focus on achieving specific goals and ensuring high-quality results.
+</p>
+<p>
+    <strong>Legal Writing:</strong> Proficiency in drafting detailed legal documents, focusing on facts and clarity.
+</p>
+<p>
+    <strong>Branding:</strong> Expertise in creating consistent and impactful branding, including logo design and color scheme development.
+</p>
+<p>
+    <strong>Database Management:</strong> Skill in extracting, normalizing, and managing data within database systems like SQL Server and SQLite.
+</p>
+<p>
+    <strong>Intuitive Problem Solving:</strong> Utilizing intuition alongside technical knowledge to ensure accurate and effective solutions.
+</p>
+<p>
+    <strong>Multi-Instrumentalist:</strong> Proficient in playing 10 different instruments, including Violin, Viola, Cello, Violin Bass, Bass Guitar, Guitar, Ukulele, Percussion, Drums, and Piano.
+</p> <h3>&nbsp;</h3>
+</div>
+   <footer>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="https://codepen.io/Jsnchase">CodePen</a>
+                <a href="https://soundcloud.com/user-999486594">SoundCloud</a>
+                <a href="Https://github.com/Kohlyde">GitHub</a>
+                <a href="ttps://edmc.nu/profile/323724-k%C3%B8hlyde/">edmc</a>
+                <a href="https://www.facebook.com/coalesceedm">Facebook</a>
+                <a href="#">Email</a>
+                <a href="#">Phone</a>
+            </div>
+            <div class="contact-info">
+                <p>Contact Information:</p>
+                <p>Email: Jschase@gmail.com</p>
+               
+            </div>
+        </footer>
+    </body>
+
+</html>
