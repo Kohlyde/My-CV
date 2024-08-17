@@ -1,0 +1,248 @@
+<html>
+  <head>
+    <title>Rate your conversation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="https://static.intercomassets.com/assets/core_styles_shim-51b5c4a3c0a9fd898ac4f07b323fced4339733c4ec79044fe578512d89adedc0.css" media="screen, projection" />
+    <style>
+      body {
+        background-color: #f3f5f7;
+        min-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer a {
+        color: #a8b6c2;
+        margin-left: 5px;
+        text-decoration: none;
+      }
+
+      .footer img {
+        vertical-align: middle;
+      }
+
+      div#content { font-size: 14px; }
+
+      .remark {
+        outline: none;
+        resize: none;
+        border: 0;
+        font-size: 14px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #37474f;
+        opacity: 0.8;
+        flex: 1;
+        min-height: 56px;
+        min-width: 315px;
+        max-width: 315px;
+        line-height: 1.36;
+        overflow: hidden;
+      }
+
+      .height-helper {
+        visibility: hidden;
+        position: absolute;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+      }
+
+      .capture__inner {
+        padding: 55px 55px 30px;
+        flex: 1;
+      }
+
+      .capture__title {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .thanks__inner {
+        width: 380px;
+        padding: 50px 50px 30px;
+      }
+
+      .thanks__title {
+        text-align: center;
+        font-size: 17px;
+      }
+
+      .remark__inner {
+        border-top: 1px solid #dadfe3;
+        box-sizing: border-box;
+        padding: 30px 70px 45px;
+        width: 100%;
+      }
+
+      .remark__content {
+        color: #8f919d;
+        font-size: 14px;
+        max-height: 120px;
+        text-align: left;
+        overflow-y: auto;
+      }
+
+      .rating-wrapper {
+        background-color: #fff;
+        box-shadow: 0 3px 8px 0 rgba(0,0,0,0.03);
+        border: 1px solid #d4dadf;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 480px;
+      }
+
+      .rating-selector {
+        height: 55px;
+        margin: 20px 20px 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .rating-selector .emoji {
+        margin-left: 20px;
+        height: 32px;
+        width: 32px;
+        -webkit-transition: all 100ms ease-in;
+        -moz-transition: all 100ms ease-in;
+        transition: all 100ms ease-in;
+        -webkit-filter: grayscale(1) opacity(.3);
+        -moz-filter: grayscale(1) opacity(.3);
+        filter: grayscale(1) opacity(.3);
+      }
+
+      .rating-selector input[type=radio] {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        visibility: hidden;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      .rating-selector input[type=radio]:checked + label .emoji {
+        transform: scale(1.45);
+        -webkit-filter: none;
+        -moz-filter: none;
+        filter: none;
+      }
+
+      .rating-selector.o__enabled .emoji {
+        cursor: pointer;
+      }
+
+      .rating-selector.o__enabled .emoji:hover {
+        transform: scale(1.45);
+        -webkit-filter: none;
+        -moz-filter: none;
+        filter: none;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+      }
+
+      .rating__submit-button:hover {
+        -webkit-filter: brightness(90%);
+        -moz-filter: brightness(90%);
+        filter: brightness(90%);
+      }
+
+      .rating__submit-button {
+        border: 0;
+        border-radius: 4px;
+        background-color: #1f8ceb;
+        padding: 8px 16px;
+        cursor: pointer;
+        color: #fff;
+        margin-top: 30px;
+        opacity: 0.9;
+        width: 100px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .rating__submit-button.o__disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      .rating__submit-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 4px;
+        font-size: 15px;
+      }
+
+      @media (max-width: 520px) {
+        .rating-wrapper { width: auto; max-width: 330px; }
+        .capture__inner, .thanks__inner { padding-left: 24px; padding-right: 24px; width: auto; }
+        .remark__inner { padding-left: 30px; padding-right: 30px; }
+      }
+
+      @media (max-width: 425px) {
+        .remark { min-width: 250px; }
+      }
+
+      @media (max-height: 580px) {
+        .capture__inner, .thanks__inner { padding-top: 24px; padding-bottom: 24px; }
+      }
+    </style>
+  </head>
+
+  <body class="u__center-layout" style="flex-direction: column;">
+    <div id="content">
+      <div class="rating-wrapper">
+  <div class="capture__inner">
+    <div class="capture__title">
+      Rate your conversation
+    </div>
+    <form action="/ratings/update" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="_method" value="put" autocomplete="off" /><input type="hidden" name="authenticity_token" value="oAuej2kauKxMHl-0otmUhqoMW-qnPB4DjDa_qoJFEs6Nk8Olua9akmu_sfy8RiDJvthNsSKBzN-pY6Ky0JXsag" autocomplete="off" />
+      <input type="hidden" name="token" id="token" value="5649918a-0a66-4572-aa94-a1527804beff" autocomplete="off" />
+      <input type="hidden" name="rating_index" id="rating_index" value="1" autocomplete="off" />
+      <input type="hidden" name="force_submit" id="force_submit" value="false" autocomplete="off" />
+      <div class="rating-selector o__enabled">
+          <input type="radio" name="rating_index" id="rating_index_1" value="1" required="required" />
+          <label for="rating_index_1"><img title="Terrible" alt="Terrible" class="emoji" src="https://static.intercomassets.com/assets/ratings/rating-1-60x60-at-2x-cc6116cc4574ac8e283a60089d2361e96011d816a2db7166bd9889e384d5c568.png" /></label>
+          <input type="radio" name="rating_index" id="rating_index_2" value="2" required="required" />
+          <label for="rating_index_2"><img title="Bad" alt="Bad" class="emoji" src="https://static.intercomassets.com/assets/ratings/rating-2-60x60-at-2x-c5ee794dd37323f8c376be7ecae997254c060663be96cdc9b51af65702744b55.png" /></label>
+          <input type="radio" name="rating_index" id="rating_index_3" value="3" required="required" />
+          <label for="rating_index_3"><img title="OK" alt="OK" class="emoji" src="https://static.intercomassets.com/assets/ratings/rating-3-60x60-at-2x-4ca083c0a210db4fc8ad18d8c491ce4e74da65117b9bd6d534f697912a5b9005.png" /></label>
+          <input type="radio" name="rating_index" id="rating_index_4" value="4" required="required" />
+          <label for="rating_index_4"><img title="Great" alt="Great" class="emoji" src="https://static.intercomassets.com/assets/ratings/rating-4-60x60-at-2x-96270f90826bff485ba88c83f0a2294224466d1f721872bc23c879ddd2312883.png" /></label>
+          <input type="radio" name="rating_index" id="rating_index_5" value="5" required="required" />
+          <label for="rating_index_5"><img title="Amazing" alt="Amazing" class="emoji" src="https://static.intercomassets.com/assets/ratings/rating-5-60x60-at-2x-b4c2b83253ebce3e61af7b995a4a445abc59f4a681387a7adcee0e36f674d916.png" /></label>
+      </div>
+      <div style="padding: 12px; border-radius: 4px; border: solid 1px #dadfe3;">
+        <textarea name="remark" id="remark" class="remark o__tall" autofocus="autofocus" wrap="false" placeholder="Tell us more (optional)">
+</textarea>
+      </div>
+      <button class="rating__submit-button" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="interface-icon o__standard o__24"><path d="M16 2L9.536 13l-3.839-2.982.839.893L3 13l.018-4.304L0 5.625zM4.036 8.25l-.018 3.411 1.768-2.464 8.786-6.161z"></path></svg>
+
+        <div class="rating__submit-text">Submit</div>
+      </button>
+</form>  </div>
+</div>
+
+    </div>
+  </body>
+  <footer class="footer u__center-layout u__mt__20">
+    <a href="http://www.intercom.com/customer-support-software/help-desk">
+      <img alt="Intercom logo" width="16" height="16" src="https://static.intercomassets.com/assets/logo-gray-16x16-at-2x-9bf84c8e16d8131102df32d30f6370311dae13d0e47f8be3c63be7e3d85e2a5d.png" />
+      <span class="u__ml__5">We run on Intercom</span>
+    </a>
+  </footer>
+
+    <script src="https://static.intercomassets.com/assets/conversation_rating-29bf475d10cb2d22a333af59f73b44e1e51d1e8906576e545af07fa1c5367604.js"></script>
+</html>

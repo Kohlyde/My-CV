@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resume</title>
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #343a40; /* Dark charcoal background */
+            color: #ffffff; /* White text color */
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: #343a40;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a img {
+            vertical-align: middle;
+            width: 24px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #444;
+            color: #ffffff;
+        }
+
+        input[type="submit"] {
+            background-color: #9a9676;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #888;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #000000; /* Darker than #000000 */
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #ffffff;
+            margin: 0;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #9a9676; /* Hover color: specified gold */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://codepen.io/yourprofile" target="_blank"><img src="path_to_codepen_icon.svg" alt="CodePen"></a></li>
+            <li><a href="https://soundcloud.com/yourprofile" target="_blank"><img src="path_to_soundcloud_icon.svg" alt="SoundCloud"></a></li>
+            <li><a href="https://github.com/yourprofile" target="_blank"><img src="path_to_github_icon.svg" alt="GitHub"></a></li>
+            <li><a href="https://facebook.com/yourprofile" target="_blank"><img src="path_to_facebook_icon.svg" alt="Facebook"></a></li>
+            <li><a href="mailto:youremail@example.com"><img src="path_to_envelope_icon.svg" alt="Email"></a></li>
+            <li><a href="tel:+1234567890"><img src="path_to_phone_icon.svg" alt="Phone"></a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" style="padding: 20px;">
+        <h1>Welcome to My Online Resume</h1>
+        <!-- Your resume content goes here -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 20px; background-color: #000000; color: #ffffff;">
+        <h2>Contact Me</h2>
+        <form action="send_email.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

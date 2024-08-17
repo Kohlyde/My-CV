@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Receipt Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <style>
+    body,
+    html {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #000000;
+      color: #E0E0E0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .navbar-main {
+      width: 100%;
+      background-color: #2F2E2E;
+    }
+
+    .coding-pad,
+    .svg-upload-container {
+      padding: 20px;
+      height: calc(100vh - 80px);
+      overflow-y: auto;
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      border: none;
+    }
+
+    .coding-pad {
+      border-right: 2px solid #333;
+    }
+
+    .svg-display-area {
+      width: 80mm;
+      height: calc(100% - 40px);
+      background-color: #0D0D0D;
+      border: 1px solid #666;
+      padding: 10px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    button {
+      background-color: #0D47A1;
+      color: #FFFFFF;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #1565C0;
+    }
+
+    textarea {
+      width: 100%;
+      height: calc(100% - 60px);
+      background-color: #1E1E1E;
+      color: #DDDDDD;
+      border: 1px solid #444;
+    }
+
+    footer {
+      background-color: #000000;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    footer p {
+      margin: 0;
+      color: #ffffff;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-main">
+    <a class="navbar-brand" href="#">KOHLYDE <i class="fas fa-record-vinyl"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#music">Music</a>
+        <a class="nav-link" href="#sample-packs">Sample Packs</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="tel:+123456789"><i class="fas fa-phone"></i></a>
+        <a class="nav-link" href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a class="nav-link" href="https://github.com/"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 KOHLYDE. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
